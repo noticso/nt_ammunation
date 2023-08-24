@@ -89,7 +89,7 @@ Per iniziare dovrai:
    ```sh
    git clone https://github.com/noticso/nt_ammunation.git
    ```
-2. Configura il tuo shop in `config.js`
+2. Configura il tuo shop in `Config.lua`
    ```lua
     {
         hash = 'WEAPON_HASH',
