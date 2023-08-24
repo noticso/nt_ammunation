@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        let weaponItem;
+        window.addEventListener('message', function(event) {
+        
+        let container = this.document.getElementById("grid")
+        let item = event.data;
+        let items = item.items
+        if (item.type === "ui") {
+            if (item.status == true) {
+                for(const[k,v] of Object.entries(items)){
+                    if(container.querySelector(`#${v.id}`) === null){
+            
+                        let weaponName = v.name.replaceAll(/_/g, ' ')
+                        let div = $(`<div class="item" ></div>`)
+                        div.attr('id', v.id)
+                        let img = $(`<img src="${v.img}" class="img"></img>`).appendTo(div)
+                        let h1 = $(`<h1 class="text">${weaponName}</h1>`).appendTo(div)
+                        let obj = {
+                            name: v.name,
+                            img: v.img,
+                            id: v.id,
+                            price: v.price,
+                            hash: v.hash
+                        }
+                        // console.log(JSON.stringify(obj))
+                        let button = $(`<button class="button" id="#${v.id}" onclick=weapon(${JSON.stringify(obj)})>View Weapon</button>`).appendTo(div)
+                        $('.grid').append(div)
+  
+                    } else{
+                    }
+                }
+            } else {
+         
+                $(".img-show-case").attr("src","")
+                $(".weapon").text("No weapon selected")
+                $(".buy").text("No weapon selected")
+                $(".show-case").hide()
+            }
+        }
+    })
+        
+        function weapon(obj){
+            let showCase = document.getElementById("show-case")
+            let name = obj.name.replaceAll(/_/g, ' ');
+            console.log(obj.hash)
+            $(".show-case").show()
+            $(".img-show-case").show()
+            if(showCase.querySelector(`.buy`) !== null){
+                console.log(JSON.stringify(obj.hash))
+                $(".img-show-case").attr("src", obj.img)
+                $(".weapon").text(name)
+                $(".buy").attr("id", obj.id)
+                $(".buy").attr("onclick", `buy(${JSON.stringify(obj)})`)
+                $(".buy").text(`Buy ${name}`)
+                $(".img-show-case").show()
+            } else{
+                $(`<img class="img-show-case" alt="" src="${obj.img}">`).appendTo($(".show-case"))
+                $(`<h1 class="weapon"> ${name}</h1>`).appendTo($(".show-case"))
+                $(`<button class="buy button" id="${obj.id}" onclick=buy(${JSON.stringify(obj)})>Buy ${name}</button>`).appendTo($(".show-case"))
+                $(".img-show-case").show()
+                console.log(JSON.stringify(obj.hash))
+            }
+            
+            
+    }
+    function buy(obj){
+        
+        let hash = obj.hash
+        let id = obj.id
+        $.post(`https://${GetParentResourceName()}/buy`, JSON.stringify({hash: hash, id: id }))
+    }
+        // id: obj.id, price: obj.price, hash: obj.hash
+       
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="grid" id="grid">
+
+        </div>
+        <div class="show-case" id="show-case" style="display: none;">
+
+        </div>
+    </div>
+    
+        
+</body>
+</html>
