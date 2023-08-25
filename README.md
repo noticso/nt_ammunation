@@ -110,8 +110,8 @@ Per iniziare dovrai:
 
 Guarda questo video per vedere l'utilizzo di questo script di FiveM
 
-[![NT_AMMUNATION](https://github.com/noticso/nt_ammunation/assets/76558194/d855b220-c942-44e3-9205-58bdde855744)
-](https://youtu.be/vt5fpE0bzSY)
+[Link Video](https://streamable.com/cbmavc)
+
 
 
 <!-- CONTRIBUTING -->
