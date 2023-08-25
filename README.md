@@ -133,7 +133,7 @@ Se vuoi contribuire a questo script segui questo passaggi
 <!-- CONTACT -->
 ## Contact
 
-noticso- [Discord](https://discord.gg/uY9agGndYs) - @noticso
+[Discord](https://discord.gg/uY9agGndYs) - @noticso
 
 Project Link: [https://github.com/noticso/nt_ammunation](https://github.com/noticso/nt_ammunation)
 
