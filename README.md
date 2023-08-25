@@ -47,8 +47,8 @@
       </ul>
     </li>
     <li><a href="#utilizzo">Come utilizzarlo</a></li>
+    <li><a href="#contribuire">Contribuire</a></li>
     <li><a href="#contact">Contatti</a></li>
-    <li><a href="#acknowledgments">Meriti</a></li>
   </ol>
 </details>
 
@@ -108,30 +108,22 @@ Per iniziare dovrai:
 <!-- USAGE EXAMPLES -->
 ## Utilizzo
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Guarda questo video per vedere l'utilizzo di questo script di FiveM
 
-
-<iframe src="https://streamable.com/e/cbmavc" frameborder="0" width="100%" height="100%" allowfullscreen style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;"></iframe>
-
-
-
-
-
+[![NT_AMMUNATION](https://github.com/noticso/nt_ammunation/assets/76558194/d855b220-c942-44e3-9205-58bdde855744)
+](https://youtu.be/vt5fpE0bzSY)
 
 
 <!-- CONTRIBUTING -->
-## Contributing
+## Contribuire
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Se vuoi contribuire a questo script segui questo passaggi
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+1. Fai un Fork del Progetto
+2. Crea il tuo branch delle feature (`git checkout -b feature/FeatureStupende`)
+3. Conferma le tue modifiche (`git commit -m 'Add some FeatureStupende'`)
+4. Invia il branch (`git push origin feature/FeatureStupende`)
+5. Apri una Pull Request
 
 <p align="right">(<a href="#readme-top">torna all'inizio</a>)</p>
 
@@ -141,40 +133,17 @@ Don't forget to give the project a star! Thanks again!
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+noticso- [Discord](https://discord.gg/uY9agGndYs) - @noticso
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/noticso/nt_ammunation](https://github.com/noticso/nt_ammunation)
 
 <p align="right">(<a href="#readme-top">torna all'inizio</a>)</p>
 
 
 
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* []()
-* []()
-* []()
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo_name/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
-[product-screenshot]: images/screenshot.png
 [Next.js]: https://img.shields.io/badge/lua-007bff?style=for-the-badge&logo=lua&logoColor=white
 [Next-url]: https://www.lua.org/
 [React.js]: https://img.shields.io/badge/javascript-000000?style=for-the-badge&logo=javascript&logoColor=yellow
