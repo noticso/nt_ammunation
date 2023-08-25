@@ -80,7 +80,7 @@
     cursor: pointer;
     font-weight: bold;
 }
-.text{
+.text, .price{
     font-size:12px;
     color:rgb(231, 231, 231);   
 }

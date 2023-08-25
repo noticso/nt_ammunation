@@ -29,6 +29,7 @@
                             hash: v.hash
                         }
                         // console.log(JSON.stringify(obj))
+                        $(`<h3 class="price">Price: ${v.price}$</h3>`).appendTo(div)
                         let button = $(`<button class="button" id="#${v.id}" onclick=weapon(${JSON.stringify(obj)})>View Weapon</button>`).appendTo(div)
                         $('.grid').append(div)
   
@@ -55,6 +56,7 @@
                 console.log(JSON.stringify(obj.hash))
                 $(".img-show-case").attr("src", obj.img)
                 $(".weapon").text(name)
+                $(".price").text(`Price: ${obj.price}$`)
                 $(".buy").attr("id", obj.id)
                 $(".buy").attr("onclick", `buy(${JSON.stringify(obj)})`)
                 $(".buy").text(`Buy ${name}`)
@@ -62,6 +64,7 @@
             } else{
                 $(`<img class="img-show-case" alt="" src="${obj.img}">`).appendTo($(".show-case"))
                 $(`<h1 class="weapon"> ${name}</h1>`).appendTo($(".show-case"))
+                $(`<h1 class="price">Price: ${obj.price}$</h1>`).appendTo($(".show-case"))
                 $(`<button class="buy button" id="${obj.id}" onclick=buy(${JSON.stringify(obj)})>Buy ${name}</button>`).appendTo($(".show-case"))
                 $(".img-show-case").show()
                 console.log(JSON.stringify(obj.hash))
