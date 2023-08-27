@@ -60,11 +60,14 @@
                 $(".buy").attr("id", obj.id)
                 $(".buy").attr("onclick", `buy(${JSON.stringify(obj)})`)
                 $(".buy").text(`Buy ${name}`)
+         
+
                 $(".img-show-case").show()
             } else{
                 $(`<img class="img-show-case" alt="" src="${obj.img}">`).appendTo($(".show-case"))
                 $(`<h1 class="weapon"> ${name}</h1>`).appendTo($(".show-case"))
-                $(`<h1 class="price">Price: ${obj.price}$</h1>`).appendTo($(".show-case"))
+                $(`<h1 class="price">Price: ${obj.price}$/pz</h1>`).appendTo($(".show-case"))
+                $(`<input type='number'  min='1' placeholder='Quantity' class='input' id='${obj.id}-input'>`).appendTo($(".show-case"))
                 $(`<button class="buy button" id="${obj.id}" onclick=buy(${JSON.stringify(obj)})>Buy ${name}</button>`).appendTo($(".show-case"))
                 $(".img-show-case").show()
                 console.log(JSON.stringify(obj.hash))
@@ -76,7 +79,10 @@
         
         let hash = obj.hash
         let id = obj.id
-        $.post(`https://${GetParentResourceName()}/buy`, JSON.stringify({hash: hash, id: id }))
+        let quantity = $(`.input`).val()
+        console.log(quantity)
+        $.post(`https://${GetParentResourceName()}/buy`, JSON.stringify({hash: hash, id: id, quantity: quantity }))
+        $(`.input`).val('')
     }
         // id: obj.id, price: obj.price, hash: obj.hash
        

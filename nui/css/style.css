@@ -24,6 +24,16 @@
     box-shadow: rgba(0, 0, 0, 0.3) 0vh 0.3vh 5vh, rgba(0, 0, 0, 0.22) 0vh 0.7vh 1.5vh;
     transform: translate(-50%, -50%);
 }
+.input{
+    width: 180px;
+    margin-top: 10px;
+    background: linear-gradient(to top, #2d2d2f 0%,  #4b4b4e 100%);
+    color:rgb(231, 231, 231);
+    border-radius: 30px;
+    height: 20px;
+    border: 0px;
+    text-align: center;
+}
 .grid{
     display: grid;
     grid-template-columns: auto auto ;

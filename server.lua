@@ -4,7 +4,6 @@ ESX = exports["es_extended"]:getSharedObject()
 
 RegisterNetEvent('nt_ammunation:buy')
 AddEventHandler('nt_ammunation:buy', function (data)
-    print(data.id)
     plr = ESX.GetPlayerFromId(source)   
     local noMoney;
     local notEnoughMoney;
@@ -14,15 +13,14 @@ AddEventHandler('nt_ammunation:buy', function (data)
     local price;
     local hash;
     for key,value in pairs(Config.Items) do
-
         if value.id == data.id then   
-            hash = value.hash 
-            
+            hash = value.hash   
            for i=0, 1 do
-            price = value.price   
-                if plr.canCarryItem(value.hash, 1)then
+            
+            price = value.price * data.quantity  
+                if plr.canCarryItem(value.hash, data.quantity)then
                     if money ~= 0 then
-                        if money >= value.price then
+                        if money >= (value.price * data.quantity) then
                             
                             paid = true         
                                
@@ -56,11 +54,10 @@ AddEventHandler('nt_ammunation:buy', function (data)
 
    end
         if paid then 
-
             TriggerClientEvent('esx:showNotification', source, 'Paying...')
             TriggerClientEvent('nt_ammunation:SetDisplay', plr.source, false)
             plr.removeMoney(price)
             Wait(2000)
-            plr.addInventoryItem(hash, 1)   
+            plr.addInventoryItem(hash, data.quantity)   
         end     
 end)

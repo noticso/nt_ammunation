@@ -2,7 +2,7 @@ fx_version 'adamant'
 
 game 'gta5'
 author 'noticso'
-version '1.00'
+version '1.1.0'
 description 'Ammunation'
 lua54 'yes'
 shared_script '@es_extended/imports.lua'
