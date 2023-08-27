@@ -1,6 +1,4 @@
 Config = {}
-Config.Location = vector3(18.3, -1111, 28.88)
-Config.TextLoc = vector3(18.3, -1111, 29.88)
 Config.MaxDistance = 4
 Config.ClickDistance = 2
 Config.Items = {
