@@ -81,15 +81,53 @@ Per iniziare dovrai:
 
 ### Pre-requisiti
 1. Avere una base FiveM con le ox resources [(ox_inventory, ox_lib, ox_mysql)](https://overextended.dev/)
+2. Installare il [(gridsystem)](https://github.com/Profex1999/gridsystem)
 
 ### Installazione
 
 
 1. Clona la repository
    ```sh
-   git clone https://github.com/noticso/nt_ammunation.git
+   git clone https://github.com/noticso/nt_crafting.git
    ```
-2. Configura il tuo shop in `Config.lua`
+2. Inserisci la tua location in `client.lua`
+   ```lua
+   local location = vector3(x,y,z)
+   ```
+3. Configura il tuo marker in `client.lua`
+   ```lua
+    TriggerEvent('gridsystem:registerMarker', {
+		name = "MarkerName",
+		pos = location,
+		size = vector3(1.2, 1.2, 1.2),
+		scale = vector3(0.8, 0.8, 0.8),
+		control = 'E',
+		rotate = 0.0,
+		rotate2 = 0.0,
+		shouldBob = false,
+		shouldRotate = true,
+		color =  { r = R , g = G, b = B },
+		trasparent = 255,
+		type = -1, -- se hai una texture lascia -1, altrimenti cambia il numero
+		texture = "TextureName",
+		msg = 'Weapon Shop',
+		action = function()
+			CreateThread(function()
+				TriggerEvent('nt_crafting:SetDisplay', true)
+				while display do 
+					DisableControlAction(0,1, display)
+    				DisableControlAction(0,142, display)
+    				DisableControlAction(0,18, display)
+    				DisableControlAction(0,322, display)
+    				DisableControlAction(0,2, display)
+    				DisableControlAction(0,106, display)
+					Wait(0)
+				end
+			end)
+		end
+	})
+   ```
+4. Configura il tuo menu in `config.lua`
    ```lua
     {
         hash = 'WEAPON_HASH',

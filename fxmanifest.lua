@@ -9,7 +9,9 @@ shared_script '@es_extended/imports.lua'
 client_scripts { 'client.lua', 'config.lua'}
 server_scripts {'server.lua', 'config.lua'}
 ui_page 'nui/index.html'
-
+dependencies {
+    'gridsystem',
+}
 files {
     'nui/index.html',
     'nui/js/*.js',
