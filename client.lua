@@ -43,7 +43,7 @@ CreateThread(function()
 		color =  { r = 130, g = 120, b = 110 },
 		trasparent = 255,
 		type = -1,
-		texture = "crafting_snk",
+		texture = "ammunation_snk",
 		msg = 'Weapon Shop',
 		action = function()
 			CreateThread(function()
