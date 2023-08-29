@@ -19,7 +19,7 @@
     <a href="https://github.com/noticso/nt_ammunation"><strong>Esplora le docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/noticso/nt_ammunation">Guarda la demo</a>
+    <a href="https://streamable.com/cbmavc">Guarda la demo</a>
     ·
     <a href="https://github.com/noticso/nt_ammunation/issues">Segnala Bug</a>
     ·
